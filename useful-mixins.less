@@ -34,3 +34,99 @@
     .valueDirection (@direction);
   }
 }
+
+
+/*========
+
+ = Arrow please LESS http://cssarrowplease.com/
+
+========*/
+
+@arrow_box(@borderColor, @bgColor, @sizeArrow, @sizeBorder) { 
+	.posR;
+	@bg(@bgColor); 
+	border: @sizeBorder solid @borderColor;
+	&:after, &:before{
+		top: 100%; 
+		border: solid transparent; 
+		content: " "; 
+		@square(0); 
+		.posA;
+		pointer-events: none;
+	}
+	&:after{
+		border-top-color: @bgColor;
+		border-width: @sizeArrow;
+		left: 50%;
+		margin-left: -@sizeArrow;
+	}
+	&:before{
+		border-top-color: @borderColor;
+		border-width: @sizeArrow + 6;
+		left: 50%;
+		margin-left: -(@sizeArrow + 6);
+	}
+ } 
+
+
+
+/*========
+
+ = Custom Shadow
+
+========*/
+
+@curlShadow(@bgcolor, @deg){
+  @bg(@bgcolor);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  .posR;
+  &:before, &:after{
+    content: '';
+    z-index: -1;
+    .posA;
+    left: 10px;
+    bottom: 10px;
+    @size(70%, 55%);
+    .box-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+    .transform(skew(-@deg) rotate(-6deg)) 
+  }
+  &:after{
+    left: auto;
+    right: 10px;
+    .transform(skew(@deg) rotate(6deg));
+  }
+}
+
+/*========
+
+ = Button Css3
+
+========*/
+
+@buttonCss3(@bgColor){
+  .gradient(@bgColor,darken(@bgColor, 15%),@bgColor);
+  color: #FFF;
+  padding: 0.8em 1.5em;
+  .rounded(4px);
+  .upper;
+  border: 0;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+  box-shadow:0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 darken(@bgColor, 20%), 0 4px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid lighten(@bgColor, 10%);
+  position: relative;
+  bottom: 0;
+  .transition(all,0.2s,ease);
+  
+  &:hover{
+    box-shadow:0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 0px 0 darken(@bgColor, 20%), 0 0px 2px rgba(0, 0, 0, 0.5);
+    bottom: -4px;
+  }
+  &:active{
+    .gradient(#FFF, lighten(@bgColor, 50%), #FFF);
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    color: @bgColor;
+    border: 1px solid #FFF;
+  }
+}
