@@ -1,4 +1,8 @@
+@basefont:14px;
+
 /*Colonnes 2, 3 et 4*/
+
+
 
 .col2, .col3, .col4, .colSidebarLeft, .colSidebarRight {
   letter-spacing: -5px; /*fix bug ff PC*/
@@ -38,11 +42,11 @@
   &:nth-child(4n+1) { margin-left: 0; }
 }
 
-@upper { text-transform:uppercase; }
+.upper() { text-transform:uppercase; }
 
-@bold { font-weight:bold; } 
+.bold() { font-weight:bold; } 
 
-@dtable { 
+.dtable() { 
   display:table;
   > * {
     display:table-row;
@@ -52,7 +56,16 @@
   }
 }
 
-@accessHide {
+.reglede3(@pxWidthContainer, @pxWidthElement) {
+  width: round((@pxWidthElement*100)/@pxWidthContainer) + 0%;
+}
+
+.em(@size, @bf: @basefont){
+  @em: @size / @bf;
+  font-size: unit(@em, em);
+}
+
+.accessHide {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
