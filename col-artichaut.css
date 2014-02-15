@@ -1,4 +1,3 @@
-
 .col {
   letter-spacing: -5px; /*fix bug ff PC*/
 }
@@ -7,6 +6,7 @@
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
+  margin-bottom:1%;
 }
 
 .colMarge > * {
