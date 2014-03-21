@@ -1,14 +1,15 @@
 /* ==========================================================================
    Sommaire
 
-   1 = Classic button
+   1 = Default button
    2 = Important button
    3 = Validate button
    4 = Warning button
+   5 = Classic button
    ========================================================================== */
 
 /* ==========================================================================
-   1 = Classic button
+   1 = Default button
    ========================================================================== */
 
 .btn {
@@ -16,8 +17,11 @@
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
-  color: #FFF;
+  color: #FFF; 
 }
+
+button.btn { border:0; }
+
   .btn:hover, 
   .btn:focus {
     background: #AAA;
@@ -55,4 +59,15 @@
   .warning-btn:hover, 
   .warning-btn:focus {
     background: #f39c12;
+  }
+
+/* ==========================================================================
+   5 = Classic button
+   ========================================================================== */
+
+.classic-btn { background: #2980b9;
+}
+  .classic-btn:hover, 
+  .classic-btn:focus {
+    background: #3498db;
   }

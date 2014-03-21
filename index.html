@@ -7,14 +7,13 @@
   <link rel="stylesheet" href="artichaut-col.css">
   <link rel="stylesheet" href="artichaut-nav.css">
   <link rel="stylesheet" href="artichaut-buttons.css">
+  <link rel="stylesheet" href="artichaut-messages.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="inner">
     <h1>Artichaut mini framework css</h1>
-    <h2>Mise en forme</h2>
-
-    <h3>Titres</h3>
+    <h2>Titres</h2>
 
     <h1>Titre h1</h1>
     <h2>Titre h2</h2>
@@ -37,10 +36,11 @@
       </fieldset>
       <fieldset>
           <legend>Bouton radio et checkbox</legend>
-          <label for="radio">Radio</label>
-          <input id="radio" type="radio"/><br/>
-          <label for="checkbox">Checkbox</label>
+          <input id="radio" type="radio"/>
+          <label for="radio">Radio</label><br/>
           <input id="checkbox" type="checkbox"/>
+          <label for="checkbox">Checkbox</label>
+          
       </fieldset>
       <h3>Select</h3>
       <select name="" id="">
@@ -145,10 +145,18 @@
     </ul>
 
     <h2>Buttons</h2>
-    <a class="btn" href="">Button</a>
+    <a class="btn" href=""> Default Button</a>
     <a class="btn important-btn" href="">Important button</a>
     <a class="btn validate-btn" href="">Validate button</a>
     <a class="btn warning-btn" href="">Warning button</a>
+    <a class="btn classic-btn" href="">Classic button</a>
+
+    <h2>Messages</h2>
+
+    <div class="messages danger"></div>
+    <div class="messages warning"></div>
+    <div class="messages success"></div>
+    
 
   </div>
 </body>
