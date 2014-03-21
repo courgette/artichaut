@@ -1,40 +1,66 @@
 /* ==========================================================================
    Sommaire
 
+   1 = Nav
    1 = Menu inline
    2 = Menu block
    3 = Breadcrumb
    4 = Pager
    ========================================================================== */
+
+.nav a {
+  color: #666;
+  text-decoration: none;
+  padding: 0.7em 1em;
+  display: block;
+}
+  .nav a:hover, .nav a:focus, .nav .active { background: #EEE; }
    
 
 /* ==========================================================================
    1 = Menu inline
    ========================================================================== */
 
+.nav-inline {
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  letter-spacing: -5px;
+}
+
 .nav-inline li {
   display: inline-block;
   vertical-align: top;
+  letter-spacing: normal;
 }  
-
-.nav-inline a {
-  color: #666;
-  text-decoration: none;
-  padding: 0.7em 1em;
-}
-  .nav-inline a:hover, .nav-inline a:focus {
-    background: #EEE;
-  }
    
 
 /* ==========================================================================
    2 = Menu block
    ========================================================================== */
 
+.nav-block { border: 1px solid #DDD; }
+
 
 /* ==========================================================================
    3 = Breadcrumb
    ========================================================================== */
+   
+.breadcrumb li {
+  display: inline-block;
+  vertical-align: top;
+  color: #666;
+}
+  .breadcrumb li:before { content: "› "; }
+  .breadcrumb li:first-child:before { content: none; }
+
+  .breadcrumb a {
+    color: #666;
+    text-decoration: none;
+  }
+
+  .breadcrumb .active { color: #000; }
+
+  .breadcrumb a:hover, .breadcrumb a:focus { text-decoration: underline; }
 
 /* ==========================================================================
    4 = Pager

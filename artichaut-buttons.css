@@ -3,6 +3,8 @@
 
    1 = Classic button
    2 = Important button
+   3 = Validate button
+   4 = Warning button
    ========================================================================== */
 
 /* ==========================================================================
@@ -16,11 +18,41 @@
   text-decoration: none;
   color: #FFF;
 }
-  .btn:hover, .btn:focus {
-    background: #CCC;
+  .btn:hover, 
+  .btn:focus {
+    background: #AAA;
   }
 
 
 /* ==========================================================================
-   1 = Classic button
+   2 = Important button
    ========================================================================== */
+
+.important-btn { background: #c0392b;
+}
+  .important-btn:hover, 
+  .important-btn:focus {
+    background: #e74c3c;
+  }
+
+/* ==========================================================================
+   3 = Validate button
+   ========================================================================== */
+
+.validate-btn { background: #27ae60;
+}
+  .validate-btn:hover, 
+  .validate-btn:focus {
+    background: #2ecc71;
+  }
+
+/* ==========================================================================
+   3 = Warning button
+   ========================================================================== */
+
+.warning-btn { background: #e67e22;
+}
+  .warning-btn:hover, 
+  .warning-btn:focus {
+    background: #f39c12;
+  }
