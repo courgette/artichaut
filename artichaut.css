@@ -213,15 +213,18 @@ table {
 }
 
 table thead {
-  background: #666;
-  color: #CCC;
+  background: #CCC;
 }
 
 table td, table th {
   padding: 0.5em;
+  color: #333;
+  border-color: #999;
 }
 
-table td { color: #333; }
+.box {
+  padding: 1.5em;
+}
 
 
 /* ==========================================================================
