@@ -1,0 +1,36 @@
+@arrow(@color, @direction, @width) {
+  position:relative;
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-style: solid;
+    border-color:@color;
+    border-width:@width;
+    position: absolute;
+    z-index: 20;
+    
+    .valueDirection (@direction) when (@direction = 'top center') {
+      top: -(2*@width);
+      left: 50%;
+      margin-left: -@width;
+    }
+    .valueDirection (@direction) when (@direction = 'bottom center') {
+      bottom: -(2*@width);
+      left: 50%;
+      margin-left: -@width;
+    }
+    .valueDirection (@direction) when (@direction = 'left center') {
+      top: 50%;
+      left: -(2*@width);
+      margin-top: -@width;
+    }
+    .valueDirection (@direction) when (@direction = 'right center') {
+      top: 50%;
+      right: -(2*@width);
+      margin-top: -@width;
+    } 
+    .valueDirection (@direction);
+  }
+}
