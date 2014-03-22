@@ -9,9 +9,12 @@
   <link rel="stylesheet" href="artichaut-nav.css">
   <link rel="stylesheet" href="artichaut-buttons.css">
   <link rel="stylesheet" href="artichaut-messages.css">
+  <link rel="stylesheet" href="artichaut-animation.css">
+  <link rel="stylesheet" href="artichaut-demo[not-important].css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="animTop" class="box panel-animation anim-top">Animation panel</div>
   <div class="inner">
     <h1>Artichaut mini framework css</h1>
     <h2>Titres</h2>
@@ -47,7 +50,7 @@
           <label for="checkbox2">Checkbox</label>
       </fieldset>
       <fieldset class="box">
-          <legend>Input Text</legend>
+          <legend>Textarea</legend>
           <label class="dblock">Label</label>
           <textarea name="" id="" cols="30" rows="10"></textarea>
       </fieldset>
@@ -178,8 +181,13 @@
     <div class="box messages danger">Message danger</div>
     <div class="box messages warning">Message warning</div>
     <div class="box messages success">Message sucess</div>
-    
 
+    <h2>Animation</h2>
+
+    
+    <button data-anim="slideintop" data-target="animTop" class="btn classic-btn btn-anim">Slide To top</button>
+    
+    <script type="text/javascript" src="artichaut.js"></script>
   </div>
 </body>
 </html>

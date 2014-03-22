@@ -1,0 +1,18 @@
+.anim-top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-height: 50%;
+  line-height: 15em;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translateY(-1000px);
+  -ms-transform: translateY(-1000px);
+  transform: translateY(-1000px);
+}
+
+.panel-animation {
+  background: #DDD;
+}
