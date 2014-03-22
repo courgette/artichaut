@@ -14,11 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
     el.addEventListener('click', function(e){
       e.preventDefault();
       var animation = this.getAttribute('data-anim'),
+          reverse = this.getAttribute('data-reverse'),
           id = this.getAttribute('data-target'),
           target = document.getElementById(id);
 
       if(target.classList.contains(animation)) {
         target.classList.remove(animation);
+        if(reverse.length > 0) {
+          target.classList.add(reverse);
+        }
       }else {
         target.classList.add(animation);
       }
