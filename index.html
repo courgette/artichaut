@@ -16,6 +16,7 @@
 <body>
   <div id="animTop" class="box panel-animation anim-top">Animation panel Top</div>
   <div id="animLeft" class="box panel-animation anim-left">Animation panel Left</div>
+  <div id="animFade" class="box panel-animation anim-fade">Animation panel Fade</div>
   <div class="inner">
     <h1>Artichaut mini framework css</h1>
     <h2>Titres</h2>
@@ -186,10 +187,13 @@
     <h2>Animation</h2>
 
     
-    <button data-anim="slideintop" data-target="animTop" class="btn classic-btn btn-anim">Slide To top</button>
+    <button data-anim="slidefromtop" data-reverse="slidetotop" data-target="animTop" class="btn classic-btn btn-anim">Slide To top</button>
     <br/>
     <br/>
     <button data-anim="slidefromleft" data-reverse="slidetoleft" data-target="animLeft" class="btn classic-btn btn-anim">Slide To Left</button>
+    <br/>
+    <br/>
+    <button data-anim="fadeIn" data-reverse="fadeOut" data-target="animFade" class="btn classic-btn btn-anim">Fade</button>
     
     <script type="text/javascript" src="artichaut.js"></script>
   </div>

@@ -3,10 +3,11 @@
 
    1 = Slide to left
    2 = Slide from left
-   3 = Slide to top
-   4 = FadeIn
+   3 = Slide from top
+   4 = Slide to top
    5 = FadeOut
-   6 = FadeIn left
+   6 = FadeIn
+   7 = FadeIn left
    ========================================================================== */
 
 .delay {
@@ -61,7 +62,7 @@
 }
 
 /* ==========================================================================
-   1 = Slide From left
+   2 = Slide From left
    ========================================================================== */
 
 @-webkit-keyframes slideFromLeft {
@@ -104,10 +105,56 @@
 }
 
 /* ==========================================================================
-   Slide to top
+   3 = Slide to top
    ========================================================================== */
 
-@-webkit-keyframes slideInTop {
+@-webkit-keyframes slideToTop {
+  0% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-1000px);
+    -ms-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes slideToTop {
+  0% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-1000px);
+    -ms-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+  }
+}
+
+.slidetotop {
+  -webkit-animation-name: slideToTop;
+  animation-name: slideToTop;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* ==========================================================================
+   4 = Slide from top
+   ========================================================================== */
+
+@-webkit-keyframes slideFromTop {
   0% {
     -webkit-transform: translateY(-1000px);
     -ms-transform: translateY(-1000px);
@@ -122,7 +169,7 @@
   }
 }
 
-@keyframes slideInTop {
+@keyframes slideFromTop {
   0% {
     -webkit-transform: translateY(-1000px);
     -ms-transform: translateY(-1000px);
@@ -137,9 +184,9 @@
   }
 }
 
-.slideintop {
-  -webkit-animation-name: slideInTop;
-  animation-name: slideInTop;
+.slidefromtop {
+  -webkit-animation-name: slideFromTop;
+  animation-name: slideFromTop;
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
@@ -148,9 +195,45 @@
   animation-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }
 
+/* ==========================================================================
+   5 = FadeOut
+   ========================================================================== */
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  } 
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
 /* ==========================================================================
-   3 = FadeIn
+   6 = FadeIn
    ========================================================================== */
 
 @-webkit-keyframes fadeIn {
@@ -170,6 +253,7 @@
 
   100% {
     opacity: 1;
+    
   }
 }
 
@@ -183,49 +267,10 @@
   animation-fill-mode: both;
   -webkit-animation-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   animation-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
-    &.delay {
-      animation-delay: 0.5s;
-      -webkit-animation-delay: 0.5s;
-    }
 }
 
 /* ==========================================================================
-   4 = FadeOut
-   ========================================================================== */
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  } 
-}
-
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-
-
-/* ==========================================================================
-   5 = FadeIn Left
+   7 = FadeIn Left
    ========================================================================== */
 
 @-webkit-keyframes fadeInLeft {
