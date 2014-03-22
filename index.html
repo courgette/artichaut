@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Artichaut | Mini framework</title>
   <link rel="stylesheet" href="artichaut.css">
+  <link rel="stylesheet" href="artichaut-form.css">
   <link rel="stylesheet" href="artichaut-col.css">
   <link rel="stylesheet" href="artichaut-nav.css">
   <link rel="stylesheet" href="artichaut-buttons.css">
@@ -29,27 +30,48 @@
     
     <h3>Formulaire</h3>
     <form>
-      <fieldset>
+      <fieldset class="box">
           <legend>Input Text</legend>
           <label>Label</label>
-          <input type="text"/>
+          <input class="form-text" type="text"/>
       </fieldset>
-      <fieldset>
+      <fieldset class="box">
           <legend>Bouton radio et checkbox</legend>
-          <input id="radio" type="radio"/>
-          <label for="radio">Radio</label><br/>
-          <input id="checkbox" type="checkbox"/>
-          <label for="checkbox">Checkbox</label>
-          
+          <input class="form-radio" value="1" name="radio" id="radio1" type="radio" checked="checked"/>
+          <label for="radio1">Radio checked</label><br/>
+          <input class="form-radio" value="1" name="radio" id="radio2" type="radio"/>
+          <label for="radio2">Radio</label><br/>
+          <input class="form-checkbox" id="checkbox1" type="checkbox" checked="checked"/>
+          <label for="checkbox1">Checkbox checked</label><br/>
+          <input class="form-checkbox" id="checkbox2" type="checkbox"/>
+          <label for="checkbox2">Checkbox</label>
       </fieldset>
-      <h3>Select</h3>
-      <select name="" id="">
-        <option value="">option-1</option>
-        <option value="">option-2</option>
-        <option value="">option-3</option>
-        <option value="">option-4</option>
-        <option value="">option-5</option>
-      </select>
+      <fieldset class="box">
+          <legend>Input Text</legend>
+          <label class="dblock">Label</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+      </fieldset>
+      <fieldset class="box">
+        <legend>Select</legend>
+        <select name="" id="">
+          <option value="">option-1</option>
+          <option value="">option-2</option>
+          <option value="">option-3</option>
+          <option value="">option-4</option>
+          <option value="">option-5</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="box">
+        <legend>Select multiple</legend>
+        <select multiple="multiple">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </fieldset>
     </form>
 
     <h3>Tableaux</h3>
