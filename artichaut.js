@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Prefix navigateur 
+   ========================================================================== */
+
 var pfx = ["webkit", "moz", "MS", "o", ""];
 function PrefixedEvent(element, type, callback) {
   for (var p = 0; p < pfx.length; p++) {
@@ -7,6 +11,14 @@ function PrefixedEvent(element, type, callback) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  /*Class to js mode*/
+  document.querySelector("html").className = 'js';
+
+  /* ==========================================================================
+     Animation JS
+     ========================================================================== */
+
   var btnAnim = document.querySelectorAll('.btn-anim'),
       closeBtn = document.getElementById('close');
 
