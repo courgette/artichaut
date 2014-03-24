@@ -49,6 +49,7 @@ select, .form-text, textarea {
 .form-checkbox:checked + label:before {
   content: "✓";
   line-height: 0.7em;
+  color: #666;
   position: relative;
   text-indent: 1px;
   font-size: 1.2em;

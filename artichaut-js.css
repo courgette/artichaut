@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Sommaire
+
+   1 = Accordion style
+   ========================================================================== */
+
+/* ==========================================================================
+   1 = Accordion Style
+   ========================================================================== */
+
+/*if no js*/
+
+.no-js .panel {
+  display: block;
+}
+
+.no-js h2{
+  padding: 1em;
+}
+
+.title-accordion {
+  background: #2c3e50;
+  color: #FFF;
+  margin: 1em 0 0;
+  font-size: 1em;
+}
+
+.title-accordion a {
+  color: #FFF;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.title-accordion a:hover,
+.title-accordion a:focus {
+  background: #34495e;
+}
+
+.panel {
+  border:1px solid #34495e;
+  padding: 1em;
+  display: none;
+}
