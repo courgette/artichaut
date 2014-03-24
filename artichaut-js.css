@@ -19,26 +19,31 @@
 }
 
 .title-accordion {
-  background: #2c3e50;
-  color: #FFF;
-  margin: 1em 0 0;
   font-size: 1em;
+  margin-bottom: 0;
 }
 
 .title-accordion a {
-  color: #FFF;
+  margin-bottom: 0;
+  position: relative;
   display: block;
-  padding: 1em;
-  text-decoration: none;
 }
-
-.title-accordion a:hover,
-.title-accordion a:focus {
-  background: #34495e;
-}
+  .title-accordion a[aria-expanded="true"] {
+    background: #999;
+    color: #FFF;
+  }
+    .title-accordion a[aria-expanded="true"]:after {
+      color: #FFF;
+    }
+  .title-accordion a:after {
+    content: "▾";
+    position: absolute;
+    top: 0.6em;
+    right: 1em;
+    color: #666;
+  }
 
 .panel {
-  border:1px solid #34495e;
   padding: 1em;
   display: none;
 }

@@ -86,6 +86,7 @@ var artichautAccordeon = (function(){
 
     el.addEventListener('click', function(e) {
       e.preventDefault();
+
       var link = this.querySelector('a'),
           nextElement = this.nextElementSibling;
 
