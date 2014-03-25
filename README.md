@@ -1,4 +1,6 @@
-# Artichaut micro Framework css
+# Artichaut
+
+Un mini framework css et js
 
 ##Documentation
 

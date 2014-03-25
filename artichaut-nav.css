@@ -1,11 +1,11 @@
 /* ==========================================================================
    Sommaire
 
-   1 = Nav
    1 = Menu inline
    2 = Menu block
    3 = Breadcrumb
    4 = Pager
+   5 = Sous menu
    ========================================================================== */
 
 .nav a {
@@ -25,13 +25,22 @@
   border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
   letter-spacing: -5px;
+  width: 100%;
+  
 }
+  .nav-inline.full {
+    display: table;
+    text-align: center;
+  }
 
-.nav-inline li {
+.nav-inline > li {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
 }  
+  .nav-inline.full > li {
+    display: table-cell;  
+  }
    
 
 /* ==========================================================================
@@ -65,3 +74,40 @@
 /* ==========================================================================
    4 = Pager
    ========================================================================== */
+   
+/* ==========================================================================
+   5 = Sous menus
+   ========================================================================== */
+  .ssmenu { position: relative; }
+  .ssmenu > a {
+    position: relative;
+    padding-right: 2.5em;
+  }
+  .ssmenu > a:hover + ul, .ssmenu > a:focus + ul {
+    top: auto;
+  }
+  .ssmenu > a:after {
+    content: "▾";
+    position: absolute;
+    top: 0.6em;
+    right: 1em;
+    color: #666;
+  }
+  .ssmenu:hover ul {
+    top: auto;
+  }
+  .ssmenu div { position: relative; }
+  .ssmenu ul {
+    position: absolute;
+    padding-left: 0;
+    top: -9999px;
+    width: 100%;
+    background: #FFF;
+    z-index: 1;
+    border: 1px solid #DDD;
+    border-top: 0;
+  }
+
+  .ssmenu li {
+    display: block;
+  }
