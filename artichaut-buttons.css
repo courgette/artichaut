@@ -20,7 +20,11 @@
   color: #FFF; 
 }
 
-button.btn { border:0; }
+button.btn,
+input.btn {
+  border:0;
+  cursor:pointer;
+}
 
   .btn:hover, 
   .btn:focus {
