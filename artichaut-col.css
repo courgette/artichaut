@@ -89,7 +89,11 @@
    ========================================================================== */
 
 @media screen and (max-width: 600px) {
-  .col2.colMarge > * { margin-left: 0; }
+  .col2.colMarge > *, 
+  .colSidebarLeft.colMarge > *,
+  .colSidebarRight.colMarge > * { 
+    margin-left: 0;
+  }
   .col2 > * { width: 100%; }
   .col4 > *, 
   .col3 > * { 
@@ -98,6 +102,14 @@
   .col4 > *:nth-child(2n+1),
   .col3 > *:nth-child(2n+1) {
     margin-left: 0;
+  } 
+  .colSidebarLeft > *:first-child,
+  .colSidebarLeft > *:first-child + *,
+  .colSidebarRight > *:first-child,
+  .colSidebarRight > *:first-child + * {
+    width: auto;
+    display: block;
+    margin-bottom: 1%;
   }
 
 }
