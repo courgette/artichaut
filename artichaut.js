@@ -3,42 +3,10 @@
 
    1 = Prefix navigateur
    2 = Animation JS
-   3 =
-   4 = Init js
+   3 = Accordeon JS
+   4 = Responsive Table
+   5 = Init Js
    ========================================================================== */
-
-/* ==========================================================================
-   1 = Functions tools 
-   ========================================================================== */
-
-  /* ==========================================================================
-      Sommaire
-
-      1 - 1 Prefix navigateur
-      1 - 2 Set attributes
-      ========================================================================== */
-
-  /* ==========================================================================
-      1-1 Prefix navigateur
-      ========================================================================== */
-
-  var pfx = ["webkit", "moz", "MS", "o", ""];
-  function PrefixedEvent(element, type, callback) {
-    for (var p = 0; p < pfx.length; p++) {
-      if (!pfx[p]) type = type.toLowerCase();
-      element.addEventListener(pfx[p]+type, callback, false);
-    }
-  }
-
-  /* ==========================================================================
-     1-2 Set attributes
-     ========================================================================== */
-
-  function setAttributes(el, attrs) {
-    for(var key in attrs) {
-      el.setAttribute(key, attrs[key]);
-    }
-  }
 
 /* ==========================================================================
    2 = Animation JS
@@ -103,7 +71,21 @@ var artichautAccordeon = (function(){
 })();
 
 /* ==========================================================================
-  4 = Init js
+   4 = Responsive table
+   ========================================================================== */
+
+var artichautResponsiveTable = (function(){
+  var table = document.getElementsByTagName('table');
+
+  [].forEach.call(table, function(el) {
+    var div = document.createElement('div');
+    div.classList.add('responsiveTable');
+    div.wrap(el);
+  });
+})();
+
+/* ==========================================================================
+  5 = Init js
    ========================================================================== */
 
 

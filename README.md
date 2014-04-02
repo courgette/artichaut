@@ -4,6 +4,12 @@ Un mini framework css et js
 
 ##Documentation
 
+###Éléments obligatoires
+
+* artichaut.css
+* artichaut-tools-function.js
+* artichaut.js
+
 ##Animation
 
 Dépendance : artichaut.js, artichaut-animation.css
