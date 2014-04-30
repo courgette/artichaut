@@ -10,7 +10,7 @@
    1 = Mixins & Global variables
    ========================================================================== */
 
-@margeLeftGlobal:1%;
+@margeLeftGlobal:2.33%;
 @sizeTabletMax:800px;
 @sizeMobileMin:600px;
 
@@ -37,7 +37,6 @@
     .colMarge {
       &.col@{number} {
         > * {
-          margin-left: @marge;
           width: (100 - (@number - 1%)*@marge)/@number;
           &:nth-child(@{number}n+1) { margin-left: 0; }
         }
@@ -50,6 +49,8 @@
 .colNumber(2, @margeLeftGlobal);
 .colNumber(3, @margeLeftGlobal);
 .colNumber(4, @margeLeftGlobal);
+
+.colMarge > * { margin-left: @margeLeftGlobal; }
 
 /* ==========================================================================
    2 = Sidebar Mixins
@@ -70,7 +71,7 @@
   }
   .valueDirection (@direction) when (@direction = Right) {
     .colSidebar@{direction} {
-      > *:first-child + * {
+      > *:first-child {
         width: @contentWidth;
         margin-left: 0;
         + * {
