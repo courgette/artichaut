@@ -1,0 +1,135 @@
+/* ==========================================================================
+   Sommaire
+
+   1 = Mixins & Gobal variables
+   2 = Sidebar Mixins
+   3 = Media queries
+   ========================================================================== */
+
+/* ==========================================================================
+   1 = Mixins & Global variables
+   ========================================================================== */
+
+@margeLeftGlobal:1%;
+@sizeTabletMax:800px;
+@sizeMobileMin:600px;
+
+.col { letter-spacing: -5px;
+  > * {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: normal;
+  }
+}
+
+.colNumber(@number, @marge) {
+  .col@{number} {
+    > * {
+      width: (100 - (@number - 1%)*@marge)/@number;
+      &:nth-child(@{number}n+1) { margin-left: 0; }
+    }
+  }
+}
+
+.colMarge(@marge) {
+  .colMarge {
+    > * { margin-left: @marge; }
+    .colNumber(2, @marge);
+    .colNumber(3, @marge);
+    .colNumber(4, @marge);
+  }
+}
+
+.colMarge(@margeLeftGlobal);
+
+.colNomarge > * { margin-left: 0; }
+
+/* ==========================================================================
+   2 = Sidebar Mixins
+   ========================================================================== */
+   
+.colSidebar(@direction, @contentWidth) {
+  
+  .valueDirection (@direction) when (@direction = Left) {
+    .colSidebar@{direction} {
+      > *:first-child {
+        width: 100-@contentWidth - @margeGlobal;
+        margin-left: 0;
+        + * {
+          width: @contentWidth;
+        }
+      }
+    }
+  }
+  .valueDirection (@direction) when (@direction = Right) {
+    .colSidebar@{direction} {
+      > *:first-child + * {
+        width: @contentWidth;
+        margin-left: 0;
+        + * {
+          width: 100-@contentWidth - @margeLeftGlobal;
+        }
+      }
+    }
+  }
+  .valueDirection(@direction);
+}
+
+.colSidebar(Right, 60%);
+.colSidebar(Left, 60%);
+
+
+/* ==========================================================================
+   3 = Media queries
+   ========================================================================== */
+
+/* ==========================================================================
+   3-1 =  Mobile
+   ========================================================================== */
+
+@media screen and (max-width: @sizeMobileMin) {
+  .col2.colMarge > *, 
+  .colSidebarLeft.colMarge > *,
+  .colSidebarRight.colMarge > * { 
+    margin-left: 0;
+  }
+  .col2 > * { width: 100%; }
+  .col4 > *, 
+  .col3 > * { 
+    width: 49.5%;
+  }
+  .col4 > *:nth-child(2n+1),
+  .col3 > *:nth-child(2n+1) {
+    margin-left: 0;
+  } 
+  .colSidebarLeft > *:first-child,
+  .colSidebarLeft > *:first-child + *,
+  .colSidebarRight > *:first-child,
+  .colSidebarRight > *:first-child + * {
+    width: auto;
+    display: block;
+    margin-bottom: 1%;
+  }
+
+}
+
+/* ==========================================================================
+   3-2 =  Tablet portrait
+   ========================================================================== */
+
+@media screen and (min-width: @sizeMobileMin) and (max-width: @sizeTabletMax)  {
+  .col4 > * { width: 32.65%; }
+  .col4 > *:nth-child(3n+1) { margin-left: 0; }
+}
+
+/* ==========================================================================
+   3-3 =  Desktop
+   ========================================================================== */
+
+@media screen and (min-width: @sizeMobileMin + 1) {
+  .col3 > *:nth-child(3n+1) { margin-left: 0; }
+}
+
+@media screen and (min-width: @sizeTabletMax + 1) {
+  .col4 > *:nth-child(4n+1) { margin-left: 0; }
+}
