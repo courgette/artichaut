@@ -14,7 +14,7 @@
 @sizeTabletMax:800px;
 @sizeMobileMin:600px;
 
-.col { letter-spacing: -5px;
+.col { letter-spacing: -5px; /*fix bug ff PC*/
   > * {
     display: inline-block;
     vertical-align: top;
@@ -53,7 +53,7 @@
   .valueDirection (@direction) when (@direction = Left) {
     .colSidebar@{direction} {
       > *:first-child {
-        width: 100-@contentWidth - @margeGlobal;
+        width: 100-@contentWidth - @margeLeftGlobal;
         margin-left: 0;
         + * {
           width: @contentWidth;
