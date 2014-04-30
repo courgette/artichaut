@@ -19,30 +19,37 @@
     display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
+    margin-bottom: @margeLeftGlobal;
   }
 }
 
 .colNumber(@number, @marge) {
-  .col@{number} {
-    > * {
-      width: (100 - (@number - 1%)*@marge)/@number;
-      &:nth-child(@{number}n+1) { margin-left: 0; }
+  .valueMarge (@marge) when (@marge = null) {
+    .colNomarge {
+      &.col@{number} {
+        > * {
+          width: 100/@number;
+        }
+      }
     }
   }
-}
-
-.colMarge(@marge) {
-  .colMarge {
-    > * { margin-left: @marge; }
-    .colNumber(2, @marge);
-    .colNumber(3, @marge);
-    .colNumber(4, @marge);
+  .valueMarge (@marge) when not(@marge = null) {
+    .colMarge {
+      &.col@{number} {
+        > * {
+          margin-left: @marge;
+          width: (100 - (@number - 1%)*@marge)/@number;
+          &:nth-child(@{number}n+1) { margin-left: 0; }
+        }
+      }
+    }
   }
+  .valueMarge(@marge);
 }
 
-.colMarge(@margeLeftGlobal);
-
-.colNomarge > * { margin-left: 0; }
+.colNumber(2, @margeLeftGlobal);
+.colNumber(3, @margeLeftGlobal);
+.colNumber(4, @margeLeftGlobal);
 
 /* ==========================================================================
    2 = Sidebar Mixins
@@ -94,12 +101,12 @@
     margin-left: 0;
   }
   .col2 > * { width: 100%; }
-  .col4 > *, 
-  .col3 > * { 
-    width: 49.5%;
+  .col4.colMarge > *, 
+  .col3.colMarge > * { 
+    width: (100 - @margeLeftGlobal)/2;
   }
-  .col4 > *:nth-child(2n+1),
-  .col3 > *:nth-child(2n+1) {
+  .col4.colMarge > *:nth-child(2n+1),
+  .col3.colMarge > *:nth-child(2n+1) {
     margin-left: 0;
   } 
   .colSidebarLeft > *:first-child,
@@ -118,8 +125,8 @@
    ========================================================================== */
 
 @media screen and (min-width: @sizeMobileMin) and (max-width: @sizeTabletMax)  {
-  .col4 > * { width: 32.65%; }
-  .col4 > *:nth-child(3n+1) { margin-left: 0; }
+  .col4.colMarge > * { width: (100 - 2 * @margeLeftGlobal)/3; }
+  .col4.colMarge > *:nth-child(3n+1) { margin-left: 0; }
 }
 
 /* ==========================================================================
@@ -127,9 +134,9 @@
    ========================================================================== */
 
 @media screen and (min-width: @sizeMobileMin + 1) {
-  .col3 > *:nth-child(3n+1) { margin-left: 0; }
+  .col3.colMarge > *:nth-child(3n+1) { margin-left: 0; }
 }
 
 @media screen and (min-width: @sizeTabletMax + 1) {
-  .col4 > *:nth-child(4n+1) { margin-left: 0; }
+  .col4.colMarge > *:nth-child(4n+1) { margin-left: 0; }
 }
