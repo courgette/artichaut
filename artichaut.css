@@ -264,6 +264,9 @@ video {
     display: inline-block;
 }
 
+img {
+    border: 0;
+}
 
 /* ==========================================================================
    4 = Responsives Elements
