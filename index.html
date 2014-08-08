@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Artichaut | Mini framework</title>
   <link rel="stylesheet" href="artichaut.css">
+  <link rel="stylesheet" href="artichaut-demo[not-important].css">
   <link rel="stylesheet" href="artichaut-form.css">
   <link rel="stylesheet" href="artichaut-col.css">
   <link rel="stylesheet" href="artichaut-nav.css">
@@ -11,14 +12,17 @@
   <link rel="stylesheet" href="artichaut-messages.css">
   <link rel="stylesheet" href="artichaut-animation.css">
   <link rel="stylesheet" href="artichaut-js.css">
-  <link rel="stylesheet" href="artichaut-demo[not-important].css">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="animTop" class="box panel-animation anim-top">Animation panel Top</div>
-  <div id="animLeft" class="box panel-animation anim-left">Animation panel Left</div>
-  <div id="animFade" class="box panel-animation anim-fade">Animation panel Fade</div>
+  
   <div class="inner">
+    <ul class="nav ul-reset nav-block">
+      <li><a href="col.html">[DEMO] Artichaut Col</a></li>
+      <li><a href="animation.html">[DEMO] Animation</a></li>
+      <li><a href="nav.html">[DEMO] Navigations</a></li>
+    </ul>
     <h1>Artichaut mini framework css</h1>
     <h2>Titres</h2>
 
@@ -103,102 +107,6 @@
       </tbody>
     </table>
 
-    <h2>Colonnes</h2>
-
-    <h3>Sidebar left</h3>
-    <div class="col colSidebarLeft colMarge">
-      <div class="box">col sidebar</div>
-      <div class="box">col</div>
-    </div>
-
-    <h3>Sidebar right</h3>
-    <div class="col colSidebarRight colMarge">
-      <div class="box">col</div>
-      <div class="box">col sidebar</div>
-    </div>
-
-    <h3>3 Colonnes</h3>
-    <div class="col col3 colMarge">
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-    </div>
-
-    <h3>4 Colonnes</h3>
-    <div class="col col4 colMarge">
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-    </div>
-
-    <h3>2 Colonnes</h3>
-    <div class="col col2 colMarge">
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
-    </div>
-
-    <h2>Navigation</h2>
-    <h3>Menus inline</h3>
-    <ul class="ul-reset nav-inline nav">
-      <li class="ssmenu"><a class="active" href="">menu-1 active</a>
-        <ul>
-          <li><a href="">ss-menu-1</a></li>
-          <li><a href="">ss-menu-2</a></li>
-          <li><a href="">ss-menu-3</a></li>
-          <li><a href="">ss-menu-4</a></li>
-          <li><a href="">ss-menu-5</a></li>
-        </ul>
-      </li>
-      <li><a href="">menu-2</a></li>
-      <li><a href="">menu-3</a></li>
-      <li><a href="">menu-4</a></li>
-      <li><a href="">menu-5</a></li>
-    </ul>
-
-    <h3>Menus inline Full</h3>
-    <ul class="ul-reset nav-inline nav full">
-      <li class="ssmenu"><a class="active" href="">menu-1 active</a>
-        <div>
-          <ul>
-            <li><a href="">ss-menu-1</a></li>
-            <li><a href="">ss-menu-2</a></li>
-            <li><a href="">ss-menu-3</a></li>
-            <li><a href="">ss-menu-4</a></li>
-            <li><a href="">ss-menu-5</a></li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="">menu-2</a></li>
-      <li><a href="">menu-3</a></li>
-      <li><a href="">menu-4</a></li>
-      <li><a href="">menu-5</a></li>
-    </ul>
-
-    <h3>Menus block</h3>
-
-    <ul class="ul-reset nav-block nav">
-      <li><a href="">menu-1</a></li>
-      <li><a class="active" href="">menu-2 active</a></li>
-      <li><a href="">menu-3</a></li>
-      <li><a href="">menu-4</a></li>
-      <li><a href="">menu-5</a></li>
-    </ul>
-
-    <h3>Breadcrumb</h3>
-
-    <ul class="ul-reset breadcrumb">
-      <li><a href="">menu-1</a></li>
-      <li><a href="">menu-2</a></li>
-      <li><a class="active" href="">menu-3</a></li>
-    </ul>
-
     <h2>Buttons</h2>
     <a class="btn" href=""> Default Button</a>
     <a class="btn important-btn" href="">Important button</a>
@@ -211,17 +119,6 @@
     <div class="box messages danger">Message danger</div>
     <div class="box messages warning">Message warning</div>
     <div class="box messages success">Message sucess</div>
-
-    <h2>Animation</h2>
-
-    
-    <button data-anim="slidefromtop" data-reverse="slidetotop" data-target="animTop" class="btn classic-btn btn-anim">Slide To top</button>
-    <br/>
-    <br/>
-    <button data-anim="slidefromleft" data-reverse="slidetoleft" data-target="animLeft" class="btn classic-btn btn-anim">Slide To Left</button>
-    <br/>
-    <br/>
-    <button data-anim="fadeIn" data-reverse="fadeOut" data-target="animFade" class="btn classic-btn btn-anim">Fade</button>
 
     <h2>Accordions</h2>
     <div class="artichaut-accordion">
@@ -249,13 +146,7 @@
       </ul>
     </div>
   </div>
-</body>
-</html>
-
-
-
-    <script type="text/javascript" src="artichaut-tools-function.js"></script>
-    <script type="text/javascript" src="artichaut.js"></script>
-  </div>
+  <script type="text/javascript" src="artichaut-tools-function.js"></script>
+  <script type="text/javascript" src="artichaut.js"></script>
 </body>
 </html>

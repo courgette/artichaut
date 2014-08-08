@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="artichaut.css"/>
+  <link rel="stylesheet" href="artichaut-demo[not-important].css"/>
+  <link rel="stylesheet" href="artichaut-animation.css"/>
+  <link rel="stylesheet" href="artichaut-buttons.css"/>
+  <script type="text/javascript" src="https://raw.github.com/less/less.js/master/dist/less-1.7.3.min.js"></script>
+</head>
+<body>
+  <div id="animTop" class="box panel-animation anim-top">Animation panel Top</div>
+  <div id="animLeft" class="box panel-animation anim-left">Animation panel Left</div>
+  <div id="animFade" class="box panel-animation anim-fade">Animation panel Fade</div>
+<div class="inner">
+  <h2>Animation</h2>
+
+    
+    <button data-anim="slidefromtop" data-reverse="slidetotop" data-target="animTop" class="btn classic-btn btn-anim">Slide To top</button>
+    <button data-anim="slidefromleft" data-reverse="slidetoleft" data-target="animLeft" class="btn classic-btn btn-anim">Slide To Left</button>
+    <button data-anim="fadeIn" data-reverse="fadeOut" data-target="animFade" class="btn classic-btn btn-anim">Fade</button>
+</div>
+<script type="text/javascript" src="artichaut.js"></script>
+</body>
+</html>

@@ -271,8 +271,14 @@ img {
 /* ==========================================================================
    4 = Responsives Elements
    ========================================================================== */
-   
-.responsiveTable {
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
+
+@media screen and (max-width: 61.25em) {
+  .responsiveTable {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+*[data-width] {
+  width: attr(data-width);
 }
