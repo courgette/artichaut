@@ -1,16 +1,14 @@
 /* ==========================================================================
-   1 = Functions tools 
-   ========================================================================== */
+  Sommaire
+
+  1 = Prefix navigateur
+  2 = Set attributes
+  3 = Wrap Element
+  4 = Get Multiple Element
+  ========================================================================== */
 
   /* ==========================================================================
-      Sommaire
-
-      1 - 1 Prefix navigateur
-      1 - 2 Set attributes
-      ========================================================================== */
-
-  /* ==========================================================================
-      1-1 Prefix navigateur
+      1 = Prefix navigateur
       ========================================================================== */
 
   var pfx = ["webkit", "moz", "MS", "o", ""];
@@ -22,7 +20,7 @@
   }
 
   /* ==========================================================================
-     1-2 Set attributes
+     2 = Set attributes
      ========================================================================== */
 
   function setAttributes(el, attrs) {
@@ -31,7 +29,11 @@
     }
   }
 
+/* ==========================================================================
+   3 = Wrap Element
+   ========================================================================== */
 
+/*http://stackoverflow.com/questions/3337587/wrapping-a-dom-element-using-pure-javascript/13169465#13169465*/
 
 // Wrap an HTMLElement around each element in an HTMLElement array.
 HTMLElement.prototype.wrap = function(elms) {
@@ -62,3 +64,45 @@ HTMLElement.prototype.wrap = function(elms) {
         }
     }
 };
+
+/*==================== Javascript Tools by Darklg https://github.com/Darklg ===================*/
+
+/* ==========================================================================
+   4 = Get Multiple Element
+   ========================================================================== */
+
+var $$_ = function(selector, parent) {
+    var idMatch = /^\#([a-z0-9_-]+)$/,
+        classMatch = /^\.([a-z0-9_-]+)$/,
+        tagMatch = /^([a-z]+)$/;
+
+    parent = parent || document;
+
+    // If selector looks like an ID, uses $_ for performance
+    if (selector.match(idMatch)) {
+        return [parent.getElementById(selector)];
+    }
+
+    // If selector looks like a CSS Class, uses getElementsByClassName for performance if available
+    if (selector.match(classMatch) && "getElementsByClassName" in document) {
+        return parent.getElementsByClassName(selector);
+    }
+
+    // If selector matches a tag elements, uses getElementsByTagName for performance
+    if (selector.match(tagMatch)) {
+        return parent.getElementsByTagName(selector);
+    }
+
+    // If Query Selector exists, use it
+    if ("querySelectorAll" in document) {
+        return parent.querySelectorAll(selector);
+    }
+
+    return [];
+};
+
+if (!Element.prototype.find) {
+    Element.prototype.find = function(selector) {
+        return $$_(selector, this);
+    };
+}
