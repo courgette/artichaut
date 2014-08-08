@@ -3,86 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>Artichaut | Mini framework</title>
-  <link rel="stylesheet" href="artichaut.css">
-  <link rel="stylesheet" href="artichaut-demo[not-important].css">
-  <link rel="stylesheet" href="artichaut-form.css">
-  <link rel="stylesheet" href="artichaut-col.css">
-  <link rel="stylesheet" href="artichaut-nav.css">
-  <link rel="stylesheet" href="artichaut-buttons.css">
-  <link rel="stylesheet" href="artichaut-messages.css">
-  <link rel="stylesheet" href="artichaut-animation.css">
-  <link rel="stylesheet" href="artichaut-js.css">
+  <link rel="stylesheet" href="lib/css/artichaut.css">
+  <link rel="stylesheet" href="lib/css/artichaut-demo[not-important].css">
+  <link rel="stylesheet" href="lib/css/artichaut-form.css">
+  <link rel="stylesheet" href="lib/css/artichaut-col.css">
+  <link rel="stylesheet" href="lib/css/artichaut-nav.css">
+  <link rel="stylesheet" href="lib/css/artichaut-buttons.css">
+  <link rel="stylesheet" href="lib/css/artichaut-messages.css">
+  <link rel="stylesheet" href="lib/css/artichaut-animation.css">
+  <link rel="stylesheet" href="lib/css/artichaut-js.css">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
   <div class="inner">
-    <ul class="nav ul-reset nav-block">
-      <li><a href="col.html">[DEMO] Artichaut Col</a></li>
-      <li><a href="animation.html">[DEMO] Animation</a></li>
-      <li><a href="nav.html">[DEMO] Navigations</a></li>
-    </ul>
+
     <h1>Artichaut mini framework css</h1>
-    <h2>Titres</h2>
-
-    <h1>Titre h1</h1>
-    <h2>Titre h2</h2>
-    <h3>Titre h3</h3>
-    <h4>Titre h4</h4>
-    <h5>Titre h5</h5>
-    <h6>Titre h6</h6>
-
-    <p class="x-text-small">texte extra small</p>
-    <p class="text-small">texte small</p>
-    <p class="text-large">texte large</p>
-    <p class="x-text-large">texte extra large</p>
     
-    <h3>Formulaire</h3>
-    <form>
-      <fieldset class="box">
-          <legend>Input Text</legend>
-          <label>Label</label>
-          <input class="form-text" type="text"/>
-      </fieldset>
-      <fieldset class="box">
-          <legend>Bouton radio et checkbox</legend>
-          <input class="form-radio" value="1" name="radio" id="radio1" type="radio" checked="checked"/>
-          <label for="radio1">Radio checked</label><br/>
-          <input class="form-radio" value="1" name="radio" id="radio2" type="radio"/>
-          <label for="radio2">Radio</label><br/>
-          <input class="form-checkbox" id="checkbox1" type="checkbox" checked="checked"/>
-          <label for="checkbox1">Checkbox checked</label><br/>
-          <input class="form-checkbox" id="checkbox2" type="checkbox"/>
-          <label for="checkbox2">Checkbox</label>
-      </fieldset>
-      <fieldset class="box">
-          <legend>Textarea</legend>
-          <label class="dblock">Label</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-      </fieldset>
-      <fieldset class="box">
-        <legend>Select</legend>
-        <select name="" id="">
-          <option value="">option-1</option>
-          <option value="">option-2</option>
-          <option value="">option-3</option>
-          <option value="">option-4</option>
-          <option value="">option-5</option>
-        </select>
-      </fieldset>
-
-      <fieldset class="box">
-        <legend>Select multiple</legend>
-        <select multiple="multiple">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </fieldset>
-    </form>
+    <ul class="nav ul-reset nav-block">
+      <li><a href="demos/typo.html">[DEMO] Typographie</a></li>
+      <li><a href="demos/form.html">[DEMO] Formulaire</a></li>
+      <li><a href="demos/nav.html">[DEMO] Navigations</a></li>
+      <li><a href="demos/col.html">[DEMO] Grille</a></li>
+      <li><a href="demos/animation.html">[DEMO] Animation</a></li>
+      <li><a href="demos/layout.html">[DEMO] Layout</a></li>
+      <li><a href="demos/js-components.html">[DEMO] Composents Js</a></li>
+    </ul>
 
     <h3>Tableaux</h3>
     <table border="1">
@@ -120,33 +67,7 @@
     <div class="box messages warning">Message warning</div>
     <div class="box messages success">Message sucess</div>
 
-    <h2>Accordions</h2>
-    <div class="artichaut-accordion">
-      <ul class="nav nav-block ul-reset">
-        <li>
-          <h2 class="title-accordion">Title - 1</h2>
-          <div class="panel" id="panel1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, aut, maiores esse a deleniti eaque voluptatibus et dolorum ut nobis ullam dolor voluptas iste pariatur architecto fuga obcaecati illum numquam!</div>
-        </li>
-        <li>
-          <h2 class="title-accordion">Title - 2</h2>
-          <div class="panel" id="panel2">Commodi, molestiae, sequi pariatur itaque nobis quod officia similique cum quibusdam dolor dolores optio ipsa officiis autem repellat provident porro accusantium ratione repudiandae amet quam nulla adipisci placeat eveniet obcaecati.</div>
-        </li>
-        <li>
-          <h2 class="title-accordion">Title - 3</h2>
-          <div class="panel" id="panel3">Hic, ea, voluptates eum deserunt vitae incidunt perspiciatis corporis dolorem cumque temporibus voluptatum aspernatur animi illum asperiores labore maiores itaque ducimus culpa necessitatibus consequuntur ullam quod similique facere iusto ipsa.</div>
-        </li>
-        <li>
-          <h2 class="title-accordion">Title - 4</h2>
-          <div class="panel" id="panel4">Veritatis, sed maiores consequuntur ea doloremque quaerat quasi fugiat. Accusantium, nostrum, mollitia quam culpa quasi necessitatibus doloribus beatae et ipsam id saepe quas impedit in nesciunt harum unde corrupti illum.</div>
-        </li>
-        <li>
-          <h2 class="title-accordion">Title - 5</h2>
-          <div class="panel" id="panel5">Ea, illo, debitis, harum repellat eum sit cumque tempore facilis aperiam cupiditate in voluptatum tempora dolor illum odio assumenda quod voluptas animi explicabo magni ipsa praesentium temporibus delectus consectetur distinctio!</div>
-        </li>
-      </ul>
-    </div>
+    
   </div>
-  <script type="text/javascript" src="artichaut-tools-function.js"></script>
-  <script type="text/javascript" src="artichaut.js"></script>
 </body>
 </html>

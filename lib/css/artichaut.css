@@ -169,19 +169,6 @@ input::-moz-focus-inner {
 
 .x-text-large { font-size:x-large; }
 
-/*Width*/
-
-.w100 { width:100%; }
-.w90 { width:90%; }
-.w80 { width:80%; }
-.w70 { width:70%; }
-.w60 { width:60%; }
-.w50 { width:50%; }
-.w40 { width:40%; }
-.w30 { width:30%; }
-.w20 { width:20%; }
-.w10 { width:10%; }
-
 h1,
 .h1 {
   font-size: 2.5em;
@@ -232,6 +219,12 @@ table td, table th {
 
 .box {
   padding: 1.5em;
+}
+
+code {
+  background: #EEE;
+  color: #666;
+  padding: 0.4em;
 }
 
 

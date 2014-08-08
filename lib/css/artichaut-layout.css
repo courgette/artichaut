@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Sommaire
+
+   1 = Fixed Menu left Layout
+   2 = Fixed Menu Right Layout
+   ========================================================================== */
+
+/* ==========================================================================
+   1 = Fixed Menu left Layout
+   ========================================================================== */
+
+.menu-left-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 15em;
+  height: 100%;
+  z-index: 1;
+  background: #CCC;
+}
+
+.layout-menu-left-fixed .content-layout {
+  margin-left: 15em;
+  padding: 2em;
+}
