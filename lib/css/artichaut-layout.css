@@ -13,13 +13,13 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 15em;
+  width: 17%;
   height: 100%;
   z-index: 1;
   background: #CCC;
 }
 
 .layout-menu-left-fixed .content-layout {
-  margin-left: 15em;
+  margin-left: 17%;
   padding: 2em;
 }

@@ -16,14 +16,19 @@
   background: #999;
   display: inline-block;
   line-height: normal;
-  padding: 0.5em 1em;
+  padding: 1em 2em;
   text-decoration: none;
-  color: #FFF; 
+  color: #FFF;
+  border-radius: 0.15em;
 }
 
 .large-btn {
-  padding: 0.8em 1.5em;
+  padding: 1.5em 3em;
   font-size: 1.1em;
+}
+
+.small-btn {
+  font-size: 0.85em;
 }
 
 button.btn,
