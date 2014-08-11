@@ -1,3 +1,58 @@
+.front {
+  background: #F9FCF2;
+}
+
+body {
+  background: #D3E2B5;;
+}
+
+.logo {
+  background: url(../../img/artichaut-logo.svg) no-repeat;
+  width: 7em;
+  height: 6em;
+  margin: 1em auto;
+}
+
+.menu-left-fixed .logo {
+  width: 14em;
+  height: 9.5em;
+  background-position: center 0;
+}
+
+.menu-left-fixed {
+  background: #FFF;
+}
+
+.content-layout {
+  background: #D3E2B5;
+}
+
+h1.logo {
+  margin-top: 1em;
+}
+
+.front .container-nav {
+  width: 20em;
+  margin: auto;
+}
+
+.container-nav .nav {
+  background: #FEFFFD;
+  border-color: #D3E2B5;
+}
+
+.container-nav .nav a {
+  color: #6D8936;
+  border-top: 1px solid #D3E2B5;
+}
+
+.container-nav li:first-child a { border-top: 0; }
+
+.container-nav .nav a:hover,
+.container-nav .nav a:focus {
+  background: #D3E2B5;
+}
+
 .box {
   background: #EEE;
 }
