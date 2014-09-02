@@ -11,15 +11,14 @@
    ========================================================================== */
 
 @margeLeftGlobal:2.33%;
-@sizeTabletMax:800px;
-@sizeMobileMin:600px;
+@sizeTabletMax:50em; //800px
+@sizeMobileMin:37.50em; //600px
 
 .col { letter-spacing: -5px; /*fix bug ff PC*/
   > * {
     display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
-    margin-bottom: @margeLeftGlobal;
   }
 }
 
@@ -29,6 +28,7 @@
       &.col@{number} {
         > * {
           width: 100/@number;
+          margin-bottom: @margeLeftGlobal;
         }
       }
     }
@@ -38,6 +38,7 @@
       &.col@{number} {
         > * {
           width: (100 - (@number - 1%)*@marge)/@number;
+          margin-bottom: @margeLeftGlobal;
           &:nth-child(@{number}n+1) { margin-left: 0; }
         }
       }
@@ -65,6 +66,7 @@
         margin-left: 0;
         + * {
           width: @contentWidth;
+          margin-bottom: @margeLeftGlobal;
         }
       }
     }
@@ -76,6 +78,7 @@
         margin-left: 0;
         + * {
           width: 100-@contentWidth - @margeLeftGlobal;
+          margin-bottom: @margeLeftGlobal;
         }
       }
     }
