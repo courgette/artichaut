@@ -140,6 +140,10 @@ input::-moz-focus-inner {
   vertical-align: middle;
 }
 
+.tac { text-align:center; }
+
+.tar { text-align:right; }
+
 .dblock { display: block; }
 
 .dnone { display: none; }
