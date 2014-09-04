@@ -1,5 +1,5 @@
 /*
-  Ratatouille mini Framework css by Thomas LEBEAU
+  Artichaut mini Framework css by Thomas LEBEAU
   Base on KNACSS => www.KNACSS.com (2013-10) @author: Raphael Goetter, Alsacreations
   and normalize.css
 */
@@ -276,6 +276,3 @@ img {
   }
 }
 
-*[data-width] {
-  width: attr(data-width);
-}
