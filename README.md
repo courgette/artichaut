@@ -2,6 +2,8 @@
 
 Un mini framework css et js
 
+[démo en ligne](http://courgette.github.io/artichaut/)
+
 ##Documentation
 
 ###Éléments obligatoires
