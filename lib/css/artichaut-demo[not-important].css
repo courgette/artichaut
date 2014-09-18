@@ -13,6 +13,15 @@ body {
   margin: 1em auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4C661A;
+}
+
 .menu-left-fixed .logo {
   width: 14em;
   height: 9.5em;
