@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="../lib/css/artichaut.css"/>
-  <link rel="stylesheet" href="../lib/css/artichaut-animation.css"/>
   <link rel="stylesheet" href="../lib/css/artichaut-nav.css"/>
   <link rel="stylesheet" href="../lib/css/artichaut-layout.css"/>
-  <link rel="stylesheet" href="../lib/css/artichaut-buttons.css"/>
+  <link rel="stylesheet" href="../lib/css/artichaut-pinterest.css"/>
   <link rel="stylesheet" href="../lib/css/artichaut-demo[not-important].css"/>
+  <link rel="stylesheet/less" type="text/css" href="../lib/less/artichaut-col.less" />
   <script type="text/javascript" src="https://raw.github.com/less/less.js/master/dist/less-1.7.3.min.js"></script>
 </head>
 <body>
@@ -31,15 +31,31 @@
     </nav>
   </div>
   <div class="content-layout">
-    <div id="animTop" class="box panel-animation anim-top">Animation panel Top</div>
-  <div id="animLeft" class="box panel-animation anim-left">Animation panel Left</div>
-  <div id="animFade" class="box panel-animation anim-fade">Animation panel Fade</div>
-    <h2>Animation</h2>
-
-      
-      <button data-anim="slidefromtop" data-reverse="slidetotop" data-target="animTop" class="btn classic-btn btn-anim">Slide To top</button>
-      <button data-anim="slidefromleft" data-reverse="slidetoleft" data-target="animLeft" class="btn classic-btn btn-anim">Slide To Left</button>
-      <button data-anim="fadeIn" data-reverse="fadeOut" data-target="animFade" class="btn classic-btn btn-anim">Fade</button>
+    <div class="col colMarge grillePinterest col4">
+      <div class="grid mh20">grille-1</div>
+      <div class="grid mh10">grille-2</div>
+      <div class="grid mh30">grille-3</div>
+      <div class="grid mh20">grille-4</div>
+      <div class="grid">grille-5</div>
+      <div class="grid mh10">grille-6</div>
+      <div class="grid mh30">grille-7</div>
+      <div class="grid">grille-8</div>
+      <div class="grid">grille-9</div>
+      <div class="grid">grille-10</div>
+      <div class="grid mh20">grille-11</div>
+      <div class="grid mh30">grille-12</div>
+      <div class="grid">grille-13</div>
+      <div class="grid mh10">grille-14</div>
+      <div class="grid mh10">grille-15</div>
+      <div class="grid mh20">grille-16</div>
+      <div class="grid">grille-17</div>
+      <div class="grid">grille-18</div>
+      <div class="grid">grille-19</div>
+      <div class="grid mh30">grille-20</div>
+      <div class="grid">grille-21</div>
+      <div class="grid mh20">grille-22</div>
+      <div class="grid">grille-23</div>
+    </div>
   </div>
 </div>
 <script type="text/javascript" src="../lib/js/artichaut.js"></script>
